@@ -1,5 +1,4 @@
 # KumulCity
-
 KumulCity is a mobile-first place discovery app focused on Morobe Province, Papua New Guinea. It helps residents and visitors find places for casual hangouts, community events, and formal gatherings. People can browse by area or type, open a map search, and use visitor ratings as local impressions when comparing where to go.
 
 ## Features
