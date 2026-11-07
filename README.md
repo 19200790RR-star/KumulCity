@@ -1,56 +1,40 @@
-# Welcome to your Expo app 👋
+# KumulCity
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+KumulCity is a mobile-first place discovery app focused on Morobe Province, Papua New Guinea. It helps residents and visitors find places for casual hangouts, community events, and formal gatherings. People can browse by area or type, open a map search, and use visitor ratings as local impressions when comparing where to go.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Home screen with a "pick for me" suggestion.
+- Place search and filters for area, category, and specific outing type or hangout style.
+- Map search links for each place.
+- Visitor ratings and visit counts to help people compare local gathering spots.
+- On-device local profiles with visitor and admin demo roles.
+- On-device place management, ratings, and visit counts.
+- Morobe-only sample suggestions.
+- No people tracking or live location sharing.
 
-   ```bash
-   npm install
-   ```
+The app icon, app splash screen, and in-app brand mark use `assets/images/kumulcity-logo.png`. Expo Go may continue showing its own launcher icon; to see updated native icon/splash settings outside Expo Go, create and install a new native app build.
 
-2. Start the app
+The included place list is starter content, not a verified directory. Food listings include Wicked Chicken, Big Rooster, Papindo Food Arcade, and Foodmart Restaurant in Lae. Lae International Hotel is listed as a conference centre for professional and social gatherings; confirm room capacity, equipment, catering, and availability with the hotel. Sports listings include Sir Ignatius Kilage Stadium, Lae Football Association Oval, and Lae Rugby League Oval. Coastal suggestions include DCA Beach and Voco Point. Place photos are bundled from `assets/images/` for Lae Botanic Gardens, PNG Unitech Rainforest Habitat, Lae War Cemetery, Bulolo town, Finschhafen, Mt Lunaman Lookout, Sipaya Village, Wicked Chicken, Big Rooster, Papindo Food Arcade, Foodmart Restaurant, Sir Ignatius Kilage Stadium, Lae Football Association Oval, Lae Rugby League Oval, DCA Beach, Voco Point, and Lae International Hotel. Confirm names, exact locations, public access, travel conditions and opening details with local sources before publishing the app.
 
-   ```bash
-   npx expo start
-   ```
+The explore screen includes category options for food and dining, accommodation, sports and recreation, outdoor and nature, hangout style, professional meetups, and tourist attractions. Add and maintain verified listings in the Admin tab. Categories without listings show a clear empty state.
 
-In the output, you'll find options to open the app in a
+## Local demo data
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+No Supabase project, account, `.env` file, or database setup is needed. Create a local profile in the app and choose Visitor or Local admin. Returning profiles can be selected by entering the same email. These profiles have no password and are only a demo convenience—not authentication or access control.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Places, profiles, ratings, and visit counts are saved with AsyncStorage on the device where Expo Go runs. They are not written into the VS Code project folder, uploaded, or synchronized to another device. Uninstalling or clearing app storage can remove them. Do not use this local-only setup for private or production data; use a backend with server-enforced authentication and roles before publishing a multi-user app.
 
-## Get a fresh project
+## Run locally
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Run the app checks with:
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```sh
+npx expo lint
+npx tsc --noEmit
+```
